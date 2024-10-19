@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&family=Yatra+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: white;
+    align-items: center;
+    font-size: 25px;
+    font-family: "Yatra One", system-ui;
+  }
+  
+  .logo img {
+    width: 60px;
+    
+  }
+  .logo span{
+    color: rgb(0, 0, 0);
+  }
+  
+  .nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    font-family: 'MyCustomFont', sans-serif;
+    
+  }
+  
+  .nav ul li {
+    list-style: none;
+  }
+  
+  .nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 18px;
+    font-weight: bold;
+  }
