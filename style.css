@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -122,4 +124,49 @@ body {
       height: auto;
       clip-path: none;
   }
+}
+
+.follow-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-links {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-links li {
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+}
+.follow-{
+  writing-mode: vertical-rl;
+  margin-top: 20px;
+  margin-right: 20px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #ffffffbd;
+}
+
+.follow-text {
+  writing-mode: vertical-rl;
+  margin-top: 20px;
+  margin-right: 20px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #ffffffbd;
+  font-style: italic;
+  font-weight: bold;
+  font-family: "Barrio", system-ui;
+  font-size: 25px;
+ 
 }
