@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&family=Yatra+One&display=swap');
 
 * {
   margin: 0;
@@ -70,20 +71,32 @@ body {
 
 .hero-text h1 {
   font-size: 4rem;
-  color: #333;
+  color: #ffffff;
+  font-family: 'MyFont';
+  text-shadow: 
+  -1px -1px 0 #c4c2c2bd, 
+  1px -1px 0 #000000c2, 
+  -1px 1px 0 #463d3de7, 
+  1px 1px 0 #000000c7;
 }
+
 
 .hero-text h1 span {
   font-size: 4.5rem;
   font-weight: bold;
-  color: #6e6d6d;
+  line-height: 0cm ;
+  color: #ffffffeb;
+  font-family: 'MyCustomFont';
+  
 }
 
 .hero-text p {
   margin-top: 20px;
   font-size: 1.2rem;
-  color: #666;
-}
+  color: #ffffff;
+  font-family:"metamorphous", serif;
+  font-size: 20px;
+  }
 
 .hero-image {
   position: absolute;
@@ -113,6 +126,7 @@ body {
 
   .hero-text h1 span {
       font-size: 3.5rem;
+
   }
 
   .hero-text p {
@@ -181,4 +195,8 @@ body {
        url('fonts/overcame-outline.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+@font-face{
+  font-family:'MyFont';
+  src: url('fonts/arenq.woff') format('woff');
 }
