@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #000000;
+  
 }
 
 .header {
@@ -15,10 +15,14 @@ body {
   padding: 20px 40px;
   background-color: white;
   align-items: center;
+  font-size: 25px;
 }
 
 .logo img {
   width: 60px;
+}
+.logo span{
+  color: rgb(0, 0, 0);
 }
 
 .nav ul {
@@ -33,7 +37,7 @@ body {
 
 .nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: #333333;
   font-size: 16px;
   font-weight: bold;
 }
@@ -47,7 +51,7 @@ body {
   justify-content: space-between;
   background-image: url(Assets/herobg-hd@2x.webp); /* Add your map background image */
   background-size: cover;
-  background-position: center;
+  
   overflow: hidden;
 }
 
@@ -65,7 +69,7 @@ body {
 .hero-text h1 span {
   font-size: 4.5rem;
   font-weight: bold;
-  color: #555;
+  color: #6e6d6d;
 }
 
 .hero-text p {
@@ -78,17 +82,44 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(135deg, transparent 50%, #000000bd 50%);
+  width: 50vw; /* Set width relative to the viewport width */
+  height: 100vh; /* Set height to full viewport height */
+  background: linear-gradient(90deg, transparent 50%, #000000bf 50%);
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 50% 100%);
 }
 
 .hero-image img {
   position: absolute;
-  right: 0;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  object-fit: cover;
-  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+    right: 0;
+    top: 0;
+    width: 50vw; /* Responsive width based on viewport */
+    height: 100vh; /* Full height of the viewport */
+    object-fit: cover; /* Ensures the image maintains aspect ratio */
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+/* Ensure responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .hero-text h1 {
+      font-size: 3rem;
+  }
+
+  .hero-text h1 span {
+      font-size: 3.5rem;
+  }
+
+  .hero-text p {
+      font-size: 1rem;
+  }
+
+  .hero-image {
+      width: 100vw; /* Full width for smaller screens */
+      clip-path: none; /* Remove clip-path for smaller screens */
+  }
+
+  .hero-image img {
+      width: 100vw;
+      height: auto;
+      clip-path: none;
+  }
 }
