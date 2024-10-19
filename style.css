@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
 
 * {
   margin: 0;
@@ -18,10 +19,12 @@ body {
   background-color: white;
   align-items: center;
   font-size: 25px;
+  font-family: "Yatra One", system-ui;
 }
 
 .logo img {
   width: 60px;
+  
 }
 .logo span{
   color: rgb(0, 0, 0);
@@ -31,6 +34,8 @@ body {
   list-style-type: none;
   display: flex;
   gap: 30px;
+  font-family: 'MyCustomFont', sans-serif;
+  
 }
 
 .nav ul li {
@@ -40,7 +45,7 @@ body {
 .nav ul li a {
   text-decoration: none;
   color: #333333;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -169,4 +174,11 @@ body {
   font-family: "Barrio", system-ui;
   font-size: 25px;
  
+}
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('fonts/overcame-bold.woff') format('woff'),
+       url('fonts/overcame-outline.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
