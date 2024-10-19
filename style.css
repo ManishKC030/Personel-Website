@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #000000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: white;
+  align-items: center;
+}
+
+.logo img {
+  width: 60px;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav ul li {
+  list-style: none;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url(Assets/herobg-hd@2x.webp); /* Add your map background image */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.hero-text {
+  padding: 40px;
+  max-width: 50%;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  color: #333;
+}
+
+.hero-text h1 span {
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.hero-text p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.hero-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent 50%, #000000bd 50%);
+}
+
+.hero-image img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
