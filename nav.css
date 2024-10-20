@@ -18,7 +18,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 40px;
-    background-color: white;
+    background-color: #FFF8E8;
     align-items: center;
     font-size: 25px;
     font-family: "Yatra One", system-ui;
@@ -42,6 +42,7 @@
   
   .nav ul li {
     list-style: none;
+    position: relative;
   }
   
   .nav ul li a {
@@ -49,4 +50,35 @@
     color: #333333;
     font-size: 18px;
     font-weight: bold;
+    position: relative;
   }
+  .nav a::before {
+    transition: 300ms;
+    height: 5px;
+    content: "";
+    position: absolute;
+    background-color: #070707;
+  }
+
+  .nav a::before {
+    height: 0%;
+    width: 100%;
+    bottom: -15px;
+  }
+  
+  .nav a:hover::before {
+    height: 5px;
+  }
+
+  @font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/overcame-bold.woff') format('woff'),
+         url('fonts/overcame-outline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face{
+    font-family:'MyFont';
+    src: url('fonts/arenq.woff') format('woff');
+  }
+  
