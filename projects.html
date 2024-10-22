@@ -6,6 +6,7 @@
     <title>Projects - Manish K.C.</title>
     <link rel="stylesheet" href="nav.css">
     <link rel="shortcut icon" href="Favicons/diagram-project-solid.svg" type="image/x-icon">
+    <link rel="stylesheet" href="projects.css">
 </head>
 <body>
     <header class="header">
@@ -21,6 +22,40 @@
             </ul>
         </nav>
     </header>
+    
+    <div class="container">
+        <h1 class="h">Don't Worry</h1>
+        <p>We're working hard to get our website ready. Stay tuned!</p>
+        <div class="loader">
+          <span class="letter" style="animation-delay: 0s;">C</span>
+          <span class="letter" style="animation-delay: 0s;">o</span>
+          <span class="letter" style="animation-delay: 0s;">m</span>
+          <span class="letter" style="animation-delay: 0s;">i</span>
+          <span class="letter" style="animation-delay: 0s;">n</span>
+          <span class="letter" style="animation-delay: 0s;">g</span>
+          <span class="letter" style="animation-delay: 0s;"> &nbsp;</span>
+          <span class="letter" style="animation-delay: 0s;">S</span>
+          <span class="letter" style="animation-delay: 0s;">o</span>
+          <span class="letter" style="animation-delay: 0s;">o</span>
+          <span class="letter" style="animation-delay: 0s;">n</span>
+          <span class="letter" style="animation-delay: 0s;">!</span>
+          <span class="letter" style="animation-delay: 0s;">!</span>
+          <span class="letter" style="animation-delay: 0s;">!</span>
+
+        </div>
+       
+    </div>
+
+    <script>
+      const letters = document.querySelectorAll('.letter');
+      let delay = 0;
+
+      letters.forEach(letter => {
+          letter.classList.add('animate');
+          letter.style.animationDelay = `${delay}s`;
+          delay += 0.1; // Increment the delay for each letter
+      });
+  </script>
     
 </body>
 </html>
