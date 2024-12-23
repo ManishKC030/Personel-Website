@@ -1,64 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blogs - Manish K.C.</title>
-    <link rel="stylesheet" href="nav.css">
-    <link rel="shortcut icon" href="Favicons/blog-solid.svg" type="image/x-icon">
-    <link rel="stylesheet" href="blogs.css">
+    <link
+      rel="shortcut icon"
+      href="Favicons/blog-solid.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="disable.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <div class="logo">
-          <a href="index.html" style="text-decoration: none; color: black;"> <h1>मनिष.</h1></a>
-        </div>
-        <nav class="nav">
-            <ul>
-                <li><a href="about.html"><h1>About</h1></a></li>
-                <li><a href="projects.html"><h1>Projects</h1></a></li>
-                <li><a href="blogs.html"><h1>Blogs</h1></a></li>
-                <li><a href="contact.html"><h1>Contact</h1></a></li>
-            </ul>
-        </nav>
+      <div class="logo">
+        <a href="index.html" style="text-decoration: none; color: black">
+          <h1>मनिष.</h1></a
+        >
+      </div>
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="about.html"><h1>About</h1></a>
+          </li>
+          <li>
+            <a href="projects.html"><h1>Projects</h1></a>
+          </li>
+          <li>
+            <a href="blogs.html"><h1>Blogs</h1></a>
+          </li>
+          <li>
+            <a href="contact.html"><h1>Contact</h1></a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    
-    
-    
 
     <div class="container">
-        <h1 class="h">Don't Worry</h1>
-        <p>We're working hard to get our website ready. Stay tuned!</p>
-        <div class="loader">
-          <span class="letter" style="animation-delay: 0s;">C</span>
-          <span class="letter" style="animation-delay: 0s;">o</span>
-          <span class="letter" style="animation-delay: 0s;">m</span>
-          <span class="letter" style="animation-delay: 0s;">i</span>
-          <span class="letter" style="animation-delay: 0s;">n</span>
-          <span class="letter" style="animation-delay: 0s;">g</span>
-          <span class="letter" style="animation-delay: 0s;"> &nbsp;</span>
-          <span class="letter" style="animation-delay: 0s;">S</span>
-          <span class="letter" style="animation-delay: 0s;">o</span>
-          <span class="letter" style="animation-delay: 0s;">o</span>
-          <span class="letter" style="animation-delay: 0s;">n</span>
-          <span class="letter" style="animation-delay: 0s;">!</span>
-          <span class="letter" style="animation-delay: 0s;">!</span>
-          <span class="letter" style="animation-delay: 0s;">!</span>
-
-        </div>
-       
+      <h1 class="blog_h">Don't Worry</h1>
+      <p class="blog_p">
+        We're working hard to get our website ready. Stay tuned!
+      </p>
+      <div class="loader">
+        <span class="letter" style="animation-delay: 0s">C</span>
+        <span class="letter" style="animation-delay: 0s">o</span>
+        <span class="letter" style="animation-delay: 0s">m</span>
+        <span class="letter" style="animation-delay: 0s">i</span>
+        <span class="letter" style="animation-delay: 0s">n</span>
+        <span class="letter" style="animation-delay: 0s">g</span>
+        <span class="letter" style="animation-delay: 0s"> &nbsp;</span>
+        <span class="letter" style="animation-delay: 0s">S</span>
+        <span class="letter" style="animation-delay: 0s">o</span>
+        <span class="letter" style="animation-delay: 0s">o</span>
+        <span class="letter" style="animation-delay: 0s">n</span>
+        <span class="letter" style="animation-delay: 0s">!</span>
+        <span class="letter" style="animation-delay: 0s">!</span>
+        <span class="letter" style="animation-delay: 0s">!</span>
+      </div>
     </div>
 
     <script>
-      const letters = document.querySelectorAll('.letter');
+      const letters = document.querySelectorAll(".letter");
       let delay = 0;
 
-      letters.forEach(letter => {
-          letter.classList.add('animate');
-          letter.style.animationDelay = `${delay}s`;
-          delay += 0.1; // Increment the delay for each letter
+      letters.forEach((letter) => {
+        letter.classList.add("animate");
+        letter.style.animationDelay = `${delay}s`;
+        delay += 0.1; // Increment the delay for each letter
       });
-  </script>
-</body>
+    </script>
+  </body>
 </html>

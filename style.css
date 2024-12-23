@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Barrio&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Yatra+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Metamorphous&family=Yatra+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 
 .hero {
   position: relative;
@@ -136,6 +138,105 @@
   font-size: 25px;
 }
 
+/* project css */
+.container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.pro_h {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.pro_p {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.loader {
+  justify-content: center;
+  font-size: 48px;
+  font-weight: bold;
+  display: flex;
+  overflow: hidden;
+}
+.letter {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: pop 0.5s forwards;
+  animation-delay: var(--delay);
+}
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+.animate {
+  animation: pop 1s forwards infinite;
+}
+
+/* blog css */
+
+.container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.blog_h {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.blog_p {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.loader {
+  justify-content: center;
+  font-size: 48px;
+  font-weight: bold;
+  display: flex;
+  overflow: hidden;
+}
+.letter {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: pop 0.5s forwards;
+  animation-delay: var(--delay);
+}
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+.animate {
+  animation: pop 1s forwards infinite;
+}
+
 /* navbar css */
 
 * {
@@ -202,6 +303,149 @@ body {
   height: 5px;
 }
 
+/* contact css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8;
+}
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+.contact-info {
+  width: 30%;
+  margin-right: 50px;
+}
+.contact-info h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+.contact-info p {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: "Kalam", cursive;
+  font-weight: 500;
+  font-style: normal;
+}
+.info-item {
+  margin-bottom: 30px;
+}
+.info-item i {
+  font-size: 2em;
+  color: #4c82f0;
+  margin-right: 15px;
+}
+.info-item h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+.info-item p {
+  margin: 0;
+  font-size: 1.1em;
+  color: #666;
+}
+.contact-form {
+  width: 40%;
+  background-color: #f8fcff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.1em;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #4c82f0;
+}
+.contact-form button {
+  background-color: #2c6a49;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background-color: #1d5036;
+}
+
+/* about.css */
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6;
+}
+
+.profile-container {
+  display: flex;
+
+  padding: 50px 20px;
+}
+
+.profile-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.profile-photo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-photo img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-details {
+  flex: 2;
+  padding-left: 100px;
+}
+
+.heading {
+  font-size: 70px;
+  font-weight: bold;
+  margin: 0;
+  color: #015249;
+  font-family: "MyHeading";
+}
+
+.sub-heading {
+  font-size: 45px;
+  margin: 20px 0 10px 0;
+  color: #015249;
+  font-family: "MyHeading";
+}
+
+.profile-details p {
+  font-size: 27px;
+  color: #25292a;
+  line-height: 1.6;
+  font-family: "Caveat", cursive;
+  font-weight: 800;
+}
+
 /* font faces here */
 @font-face {
   font-family: "MyCustomFont";
@@ -213,4 +457,8 @@ body {
 @font-face {
   font-family: "MyFont";
   src: url("fonts/arenq.woff") format("woff");
+}
+@font-face {
+  font-family: "MyHeading";
+  src: url(fonts/acorn.woff) format("woff");
 }
