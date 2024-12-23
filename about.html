@@ -3,72 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 Not Found</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f9;
-        color: #333;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        text-align: center;
-      }
-
-      .container {
-        max-width: 600px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* Centers child elements horizontally */
-      }
-
-      .animation {
-        /* Increased height */
-        margin-bottom: 20px;
-      }
-
-      h1 {
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-      }
-
-      p {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
-      }
-
-      a {
-        text-decoration: none;
-        color: #007bff;
-        font-size: 1.2rem;
-        font-weight: bold;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-    </style>
+    <title>About - Manish K.C.</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="Favicons/profile.svg" type="image/x-icon" />
+    <script src="disable.js" defer></script>
   </head>
-
   <body>
-    <div class="container">
-      <div class="animation">
-        <lottie-player
-          src="Assets/animation/not-found.json"
-          background="transparent"
-          speed="1"
-          style="width: 900px"
-          loop
-          autoplay
-        ></lottie-player>
+    <header class="header">
+      <div class="logo">
+        <a href="index.html" style="text-decoration: none; color: black">
+          <h1>मनिष.</h1></a
+        >
       </div>
-      <h1>Page Not Found</h1>
-      <a href="index.php">Return to Home</a>
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="about.html"><h1>About</h1></a>
+          </li>
+          <li>
+            <a href="projects.html"><h1>Projects</h1></a>
+          </li>
+          <li>
+            <a href="blogs.html"><h1>Blogs</h1></a>
+          </li>
+          <li>
+            <a href="contact.html"><h1>Contact</h1></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="profile-container">
+      <div class="profile-content">
+        <div class="profile-photo">
+          <img src="Assets/download.jpg" alt="Profile Picture" />
+        </div>
+        <div class="profile-details">
+          <h1 class="heading">I'm Manish K.C.</h1>
+          <h2 class="sub-heading">I Don't know what to write........</h2>
+          <p>
+            Lorem ipsum dolor sit ametI consectetur adipisicingam elit.
+            Perferendis assumendalost iusto pariatur amet dolorum velit,
+            donterror modi sunt, suscipit, placeat aspernatur exercitationem?
+            Harum hic molestias dolorum velit, soluta ab blanditiis?
+          </p>
+          <p>
+            Lorem ipsum dolorknow sit amet consecteturwhat adipisicing elit.
+            Veritatis sit asperiores harumI dolorum odit placeatam totam
+            possimus reprehenderit doingtempora molestiae eaque consequatur
+            iure, est ipsa error minima laudantium! Eaque, quas.
+          </p>
+        </div>
+      </div>
     </div>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </body>
 </html>
