@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <style>
+      /* Quotes Section Styling */
+      #quotes {
+        padding: 20px 0;
+        background-color: #f9f9f9;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .quotes-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .quote-card {
+        flex: 0 0 auto;
+        width: 300px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        scroll-snap-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .quote-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      blockquote {
+        font-style: italic;
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      .quote-author {
+        font-size: 0.9rem;
+        color: #777;
+      }
+
+      /* Hide Scrollbar */
+      .quotes-container::-webkit-scrollbar {
+        display: none;
+      }
+
+      .quotes-container {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="quotes" class="section">
+      <div class="container">
+        <div class="quotes-container">
+          <div class="quote-card">
+            <blockquote>
+              "The only limit to our realization of tomorrow is our doubts of
+              today."
+            </blockquote>
+            <p class="quote-author">— Franklin D. Roosevelt</p>
+          </div>
+
+          <div class="quote-card">
+            <blockquote>
+              "Life is what happens when you're busy making other plans."
+            </blockquote>
+            <p class="quote-author">— John Lennon</p>
+          </div>
+
+          <div class="quote-card">
+            <blockquote>
+              "Strive not to be a success, but rather to be of value."
+            </blockquote>
+            <p class="quote-author">— Albert Einstein</p>
+          </div>
+
+          <div class="quote-card">
+            <blockquote>
+              "Your time is limited, so don't waste it living someone else's
+              life."
+            </blockquote>
+            <p class="quote-author">— Steve Jobs</p>
+          </div>
+          <div class="quote-card">
+            <blockquote>"Your new inspiring quote goes here."</blockquote>
+            <p class="quote-author">— Author Name</p>
+          </div>
+          <div class="quote-card">
+            <blockquote>"Your new inspiring quote goes here."</blockquote>
+            <p class="quote-author">— Author 22Name</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
