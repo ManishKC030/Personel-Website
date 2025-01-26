@@ -608,6 +608,7 @@ body {
 .profile-container {
   display: flex;
 
+  align-items: center;
   padding: 50px 20px;
 }
 
@@ -616,12 +617,14 @@ body {
   align-items: center;
   max-width: 1200px;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .profile-photo {
   flex: 1;
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 .profile-photo img {
@@ -657,6 +660,62 @@ body {
   line-height: 1.6;
   font-family: "Caveat", cursive;
   font-weight: 800;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 20px;
+  }
+
+  .profile-photo img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .profile-details {
+    padding-left: 50px; /* Reduce padding */
+  }
+
+  .heading {
+    font-size: 50px;
+  }
+
+  .sub-heading {
+    font-size: 35px;
+  }
+
+  .profile-details p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-content {
+    flex-direction: column; /* Stack photo and details vertically */
+    align-items: center; /* Center align content */
+    text-align: center; /* Center text for smaller screens */
+  }
+
+  .profile-photo img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .profile-details {
+    padding-left: 0; /* Remove left padding for centered layout */
+  }
+
+  .heading {
+    font-size: 40px;
+  }
+
+  .sub-heading {
+    font-size: 30px;
+  }
+
+  .profile-details p {
+    font-size: 18px;
+  }
 }
 
 /* font faces here */
