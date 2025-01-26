@@ -5,11 +5,130 @@
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 
+/* navbar css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: #fff8e8;
+  align-items: center;
+  font-size: 25px;
+  font-family: "Yatra One", system-ui;
+}
+
+.logo img {
+  width: 60px;
+}
+.logo span {
+  color: rgb(0, 0, 0);
+}
+.nav-links {
+  z-index: 7;
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+  font-family: "MyCustomFont", sans-serif;
+}
+
+.nav-links li {
+  list-style: none;
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+}
+.nav-links a::before {
+  transition: 300ms;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: #070707;
+  height: 0%;
+  width: 100%;
+  bottom: -15px;
+}
+
+.nav a:hover::before {
+  height: 5px;
+  width: 100%;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: #333;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #fff8e8;
+    position: absolute;
+    top: 70px;
+    right: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    padding-bottom: 25px;
+  }
+  .nav-links {
+    max-width: 100%; /* Prevent overflowing */
+    overflow-x: hidden; /* Hide overflow if content is larger */
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff8e8;
+    align-items: center;
+    font-size: 20px;
+    font-family: "Yatra One", system-ui;
+  }
+
+   .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Index css  */
 .hero {
   position: relative;
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: row; /* Horizontal alignment for larger screens */
   align-items: center;
   justify-content: space-between;
   background-image: url(Assets/herobg-hd@2x.webp); /* Add your map background image */
@@ -56,48 +175,24 @@
   height: 100vh; /* Set height to full viewport height */
   background: linear-gradient(90deg, transparent 50%, #000000bf 50%);
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 50% 100%);
+  max-width: 100%;
 }
 
 .hero-image img {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 50vw; /* Responsive width based on viewport */
-  height: 100vh; /* Full height of the viewport */
-  object-fit: cover; /* Ensures the image maintains aspect ratio */
-  clip-path: polygon(100% 0, 100% 0, 100% 100%, 50% 100%);
-}
-
-/* Ensure responsiveness for smaller screens */
-@media (max-width: 768px) {
-  .hero-text h1 {
-    font-size: 3rem;
-  }
-
-  .hero-text h1 span {
-    font-size: 3.5rem;
-  }
-
-  .hero-text p {
-    font-size: 1rem;
-  }
-
-  .hero-image {
-    width: 100vw; /* Full width for smaller screens */
-    clip-path: none; /* Remove clip-path for smaller screens */
-  }
-
-  .hero-image img {
-    width: 100vw;
-    height: auto;
-    clip-path: none;
-  }
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  object-fit: cover;
 }
 
 .follow-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: absolute;
+  right: 5px;
+
+  z-index: 4;
 }
 
 .social-links {
@@ -105,6 +200,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 5px;
 }
 
 .social-links li {
@@ -115,7 +211,12 @@
 .social-links img {
   width: 30px;
   height: 30px;
+  transition: transform 0.3s ease;
 }
+.social-links img:hover {
+  transform: scale(1.1); /* Adds a hover effect */
+}
+
 .follow- {
   writing-mode: vertical-rl;
   margin-top: 20px;
@@ -136,6 +237,119 @@
   font-weight: bold;
   font-family: "Barrio", system-ui;
   font-size: 25px;
+}
+
+/* Ensure responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Stack content vertically for smaller screens */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 92vh; /* Adjust height for stacked content */
+    background-size: cover;
+    overflow-x: hidden;
+  }
+  .hero-text {
+    max-width: 90%; /* Reduce text width for smaller screens */
+    padding: 20px;
+    text-align: center; /* Center-align text */
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-text h1 span {
+    font-size: 3.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    background-position: center;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full width for smaller screens */
+    background: none; /* Remove gradient for smaller screens */
+  }
+  .hero-image img {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Maintain aspect ratio */
+  }
+  .follow-section {
+    background-color: #000000bf;
+    padding: 15px;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .social-links {
+    flex-direction: row; /* Horizontal alignment for social icons */
+    gap: 15px;
+  }
+  .social-links img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .social-links img:hover {
+    transform: scale(1.1); /* Adds a hover effect */
+    /* Slight color change on hover */
+  }
+
+  .follow-,
+  .follow-text {
+    display: none; /* Hide vertical text on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+  }
+
+  .nav-links {
+    max-width: 100%;
+    overflow-x: hidden; /* Ensure the navbar stays within the viewport */
+  }
+
+  .social-links {
+    flex-wrap: wrap; /* Adjust layout if there's not enough space */
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-text h1 span {
+    font-size: 3.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .social-links img {
+    width: 35px; /* Slightly smaller icons for very small screens */
+    height: 35px;
+  }
+  .hero-image {
+    height: 100vh; /* Ensure the image fills the screen */
+  }
+
+  .hero-image img {
+    height: 100%; /* Full height */
+  }
 }
 
 /* project css */
@@ -235,72 +449,6 @@
 }
 .animate {
   animation: pop 1s forwards infinite;
-}
-
-/* navbar css */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Arial", sans-serif;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px;
-  background-color: #fff8e8;
-  align-items: center;
-  font-size: 25px;
-  font-family: "Yatra One", system-ui;
-}
-
-.logo img {
-  width: 60px;
-}
-.logo span {
-  color: rgb(0, 0, 0);
-}
-
-.nav ul {
-  list-style-type: none;
-  display: flex;
-  gap: 30px;
-  font-family: "MyCustomFont", sans-serif;
-}
-
-.nav ul li {
-  list-style: none;
-  position: relative;
-}
-
-.nav ul li a {
-  text-decoration: none;
-  color: #333333;
-  font-size: 18px;
-  font-weight: bold;
-  position: relative;
-}
-.nav a::before {
-  transition: 300ms;
-  height: 5px;
-  content: "";
-  position: absolute;
-  background-color: #070707;
-}
-
-.nav a::before {
-  height: 0%;
-  width: 100%;
-  bottom: -15px;
-}
-
-.nav a:hover::before {
-  height: 5px;
 }
 
 /* contact css */

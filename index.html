@@ -12,40 +12,35 @@
     />
     <script src="disable.js" defer></script>
   </head>
-  <body>
-    <header class="header">
-      <div class="logo">
-        <a href="index.html" style="text-decoration: none; color: black">
-          <h1>मनिष.</h1></a
-        >
+  <header class="header">
+    <div class="logo">
+      <a href="index.html" style="text-decoration: none; color: black">
+        <h1>मनिष.</h1></a
+      >
+    </div>
+    <nav class="nav">
+      <ul class="nav-links">
+        <li>
+          <a href="about.html"><h1>About</h1></a>
+        </li>
+        <li>
+          <a href="Portfolio.html"><h1>Portfolio</h1></a>
+        </li>
+        <li>
+          <a href="blogs.html"><h1>Blogs</h1></a>
+        </li>
+        <li>
+          <a href="contact.html"><h1>Contact</h1></a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <nav class="nav">
-        <ul>
-          <li>
-            <a href="about.html"><h1>About</h1></a>
-          </li>
-          <li>
-            <a href="Portfolio.html"><h1>Portfolio</h1></a>
-          </li>
-          <li>
-            <a href="blogs.html"><h1>Blogs</h1></a>
-          </li>
-          <li>
-            <a href="contact.html"><h1>Contact</h1></a>
-          </li>
-        </ul>
-      </nav>
-
-      <script>
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
-
-        hamburger.addEventListener("click", () => {
-          navLinks.classList.toggle("active");
-        });
-      </script>
-    </header>
-
+    </nav>
+  </header>
+  <body>
     <section class="hero">
       <div class="hero-text">
         <h1>
@@ -89,5 +84,26 @@
         <p class="follow-text">Follow ME</p>
       </div>
     </section>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      // Toggle nav menu on hamburger click
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      // Close nav menu when clicking outside
+      document.addEventListener("click", (event) => {
+        // Check if the click is outside the hamburger and nav menu
+        if (
+          !navLinks.contains(event.target) &&
+          !hamburger.contains(event.target) &&
+          navLinks.classList.contains("active")
+        ) {
+          navLinks.classList.remove("active");
+        }
+      });
+    </script>
   </body>
 </html>
