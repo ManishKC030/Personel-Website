@@ -113,7 +113,7 @@ body {
     font-family: "Yatra One", system-ui;
   }
 
-   .nav-links.active {
+  .nav-links.active {
     display: flex;
   }
 
@@ -528,6 +528,71 @@ body {
 }
 .contact-form button:hover {
   background-color: #1d5036;
+}
+/* Responsive contact form */
+@media (max-width: 768px) {
+  .container2 {
+    align-items: center;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .contact-info {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 581px) {
+  .container2 {
+    flex-direction: column-reverse; /* Row layout for small screens */
+    justify-content: center;
+
+    /* Wrap content if it doesn't fit in one line */
+  }
+
+  .contact-form {
+    width: 90%; /* Form takes most of the screen width */
+    margin: 0 auto 20px; /* Center the form with spacing below */
+  }
+
+  .contact-info {
+    width: 90%; /* Contact info same width as form */
+    margin: 0 auto; /* Center align the contact info */
+  }
+  .contact-info h1 {
+    font-size: 1.8em;
+  }
+
+  .contact-info p {
+    font-size: 16px;
+  }
+
+  .info-item i {
+    font-size: 1.4em;
+  }
+
+  .info-item h3 {
+    font-size: 0.9em;
+  }
+
+  .info-item p {
+    font-size: 0.85em;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1em;
+    padding: 8px;
+  }
+
+  .contact-form button {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
 }
 
 /* about.css */
