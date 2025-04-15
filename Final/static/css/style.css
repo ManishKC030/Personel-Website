@@ -721,16 +721,16 @@ body {
 /* font faces here */
 @font-face {
   font-family: "MyCustomFont";
-  src: url("fonts/overcame-bold.woff") format("woff"),
-    url("fonts/overcame-outline.woff") format("woff");
+  src: url("/static/fonts/overcame-bold.woff") format("woff"),
+    url("/static/fonts/overcame-outline.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "MyFont";
-  src: url("fonts/arenq.woff") format("woff");
+  src: url("/static/fonts/arenq.woff") format("woff");
 }
 @font-face {
   font-family: "MyHeading";
-  src: url(fonts/acorn.woff) format("woff");
+  src: url("/static/fonts/acorn.woff") format("woff");
 }
