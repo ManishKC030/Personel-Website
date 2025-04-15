@@ -16,23 +16,23 @@
   <body>
     <header class="header">
       <div class="logo">
-        <a href="index.html" style="text-decoration: none; color: black">
+        <a href="{% url "home" %}" style="text-decoration: none; color: black">
           <h1>मनिष.</h1></a
         >
       </div>
       <nav class="nav">
         <ul class="nav-links">
           <li>
-            <a href="about.html"><h1>About</h1></a>
+            <a href="{% url "about" %}"><h1>About</h1></a>
           </li>
           <li>
-            <a href="Portfolio.html"><h1>Portfolio</h1></a>
+            <a href="{% url "portfolio" %}"><h1>Portfolio</h1></a>
           </li>
           <li>
-            <a href="blogs.html"><h1>Blogs</h1></a>
+            <a href="{% url "blogs" %}"><h1>Blogs</h1></a>
           </li>
           <li>
-            <a href="contact.html"><h1>Contact</h1></a>
+            <a href="{% url "contact" %}"><h1>Contact</h1></a>
           </li>
         </ul>
         <div class="hamburger">
