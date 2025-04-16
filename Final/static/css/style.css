@@ -131,9 +131,8 @@ body {
   flex-direction: row; /* Horizontal alignment for larger screens */
   align-items: center;
   justify-content: space-between;
-  background-image: url(Assets/herobg-hd@2x.webp); /* Add your map background image */
+  background-image: url("/static/Assets/herobg-hd@2x.webp"); 
   background-size: cover;
-
   overflow: hidden;
 }
 
