@@ -6,11 +6,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}{% endblock title %}</title>
-    <link rel="stylesheet" href={% static "css/style.css" %}/> 
-    <link
-    rel="shortcut icon" href= {% static "Favicons/house-solid.svg" %}
-    type="image/x-icon" />
-    <script src={% static "js/disable.js"%} defer></script>
+    <link rel="stylesheet" href="{% static "css/style.css" %}"/> 
+    {% block favicon %}{% endblock favicon %}
+    <script src="{% static "js/disable.js"%}" defer></script>
+    <script src ="{% static "js/navbar.js" %}" defer></script>
   </head>
 
   <body>

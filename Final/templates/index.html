@@ -2,7 +2,13 @@
 {% extends "base.html" %}
 {% load static %}
  {% block title %}Home - Manish K.C.{% endblock title%} 
+ {% block favicon %}
+ <link
+ rel="shortcut icon" href= "{% static "Favicons/house-solid.svg" %}"
+ type="image/x-icon" />
+ {% endblock favicon %}
 {% block content %}
+
 <section class="hero">
   <div class="hero-text">
     <h1>
