@@ -1,89 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - Manish K.C.</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="shortcut icon"
-      href="Favicons/house-solid.svg"
-      type="image/x-icon"
-    />
-    <script src="disable.js" defer></script>
-    <script src="navbar.js" defer></script>
-  </head>
-  <header class="header">
-    <div class="logo">
-      <a href="index.html" style="text-decoration: none; color: black">
-        <h1>मनिष.</h1></a
-      >
-    </div>
-    <nav class="nav">
-      <ul class="nav-links">
-        <li>
-          <a href="about.html"><h1>About</h1></a>
-        </li>
-        <li>
-          <a href="Portfolio.html"><h1>Portfolio</h1></a>
-        </li>
-        <li>
-          <a href="blogs.html"><h1>Blogs</h1></a>
-        </li>
-        <li>
-          <a href="contact.html"><h1>Contact</h1></a>
-        </li>
-      </ul>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
-  </header>
-  <body>
-    <section class="hero">
-      <div class="hero-text">
-        <h1>
-          HI, &nbsp;I'M <br />
-          <span>Manish KC</span>
-        </h1>
-        <p>"Carpe Diem"</p>
-      </div>
-      <div class="hero-image"></div>
+<!-- prettier-ignore -->
+{% extends "base.html" %}
+{% load static %}
+ {% block title %}Home - Manish K.C.{% endblock title%} 
+{% block content %}
+<section class="hero">
+  <div class="hero-text">
+    <h1>
+      HI, &nbsp;I'M <br />
+      <span>Manish KC</span>
+    </h1>
+    <p>"Carpe Diem"</p>
+  </div>
+  <div class="hero-image"></div>
 
-      <div class="follow-section" style="z-index: 4">
-        <ul class="social-links" style="opacity: 75%">
-          <li>
-            <a
-              href="https://youtu.be/dQw4w9WgXcQ?si=_-vqOGkn0NQlbSJa"
-              target="_blank"
-              ><img src="icons/instagram.svg" alt="Instagram"
-            /></a>
-          </li>
-          <li>
-            <a
-              href="https://youtu.be/dQw4w9WgXcQ?si=_-vqOGkn0NQlbSJa"
-              target="_blank"
-              ><img src="icons/facebook.svg" alt="Facebook"
-            /></a>
-          </li>
-          <li>
-            <a href="https://github.com/ManishKC030" target="_blank"
-              ><img src="icons/github.svg" alt="Github"
-            /></a>
-          </li>
-          <li>
-            <a
-              href="https://youtu.be/dQw4w9WgXcQ?si=_-vqOGkn0NQlbSJa"
-              target="_blank"
-              ><img src="icons/linked.svg" alt="LinkedIn"
-            /></a>
-          </li>
-        </ul>
-        <p class="follow-">-----------</p>
-        <p class="follow-text">Follow ME</p>
-      </div>
-    </section>
-  </body>
-</html>
+  <div class="follow-section" style="z-index: 4">
+    <ul class="social-links" style="opacity: 75%">
+      <li>
+        <a
+          href="https://youtu.be/dQw4w9WgXcQ?si=_-vqOGkn0NQlbSJa"
+          target="_blank"
+        >
+          <img src="{% static "icons/instagram.svg" %}" alt="Instagram" /></a
+        >
+      </li>
+      <li>
+        <a
+          href="https://youtu.be/dQw4w9WgXcQ?si=_-vqOGkn0NQlbSJa"
+          target="_blank"
+          ><img src="{% static "icons/facebook.svg" %}" alt="Facebook" /></a
+        >
+      </li>
+      <li>
+        <a href="https://github.com/ManishKC030" target="_blank"
+          ><img src="{% static "icons/github.svg" %}" alt="Github" /></a
+        >
+      </li>
+      <li>
+        <a
+          href="https://youtu.be/dQw4w9WgXcQ?si=_-vqOGkn0NQlbSJa"
+          target="_blank"
+          ><img src="{% static "icons/linked.svg" %}" alt="LinkedIn" /></a
+        >
+      </li>
+    </ul>
+    <p class="follow-">-----------</p>
+    <p class="follow-text">Follow ME</p>
+  </div>
+</section>
+{% endblock content %}
