@@ -23,7 +23,7 @@
 
       .content {
         position: absolute;
-        top: 57%; 
+        top: 57%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
@@ -49,13 +49,30 @@
 
       .animation {
         position: absolute;
-        bottom: -50px; 
+        bottom: -50px;
         left: 50%;
         transform: translateX(-50%);
         width: 1000px;
         z-index: 1;
         pointer-events: none;
       }
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2rem;
+        }
+
+        a {
+          font-size: 1rem;
+        }
+
+        .content {
+          top: 70%;
+        }
+
+        .animation {
+          width: 100%;
+          top: 6%;
+        }
     </style>
   </head>
 
@@ -71,7 +88,7 @@
           src="{% static 'Assets/animation/construction.json' %}"
           background="transparent"
           speed="1"
-          style="width: 100%; height: auto;"
+          style="width: 100%; height: auto"
           loop
           autoplay
         ></lottie-player>
