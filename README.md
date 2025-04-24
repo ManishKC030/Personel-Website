@@ -1,1 +1,3 @@
-# Nothings Here
+# Nothings Here   
+  what is gunicorn and nginx?
+  
