@@ -1,3 +1,3 @@
 # Nothings Here   
-  Lost all the files. sorry
+  Lost all the files. Sorry
   
