@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Manish K.C.</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="Favicons/house-solid.svg"
+      type="image/x-icon"
+    />
+    <script src="disable.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="index.html" style="text-decoration: none; color: black">
+          <h1>मनिष.</h1></a
+        >
+      </div>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li>
+            <a href="about.html"><h1>About</h1></a>
+          </li>
+          <li>
+            <a href="Portfolio.html"><h1>Portfolio</h1></a>
+          </li>
+          <li>
+            <a href="blogs.html"><h1>Blogs</h1></a>
+          </li>
+          <li>
+            <a href="contact.html"><h1>Contact</h1></a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
